@@ -8,7 +8,7 @@ class AdminLogin extends Component {
         super(props)
 
         this.state = {
-            identity: '',
+            account: '',
             password: ''
         }
         this.handleSignIn = this.handleSignIn.bind(this)
@@ -17,16 +17,16 @@ class AdminLogin extends Component {
     }
 
     handleIdentity(event) {
-        this.setState({ identity: event.target.value })
+        this.setState({ account: event.target.value })
     }
     handlePassword(event) {
         this.setState({ password: event.target.value })
     }
     handleSignIn() {
-        let identity = this.state.identity
+        let account = this.state.account
         let password = this.state.password
 
-        if(identity==='admin'&&password==='admin'){
+        if(account==='admin'&&password==='admin'){
             window.location.replace("/admin/index")
         }else{
             window.alert('You put wrong account, password or left it blank, please try again')
@@ -49,9 +49,9 @@ class AdminLogin extends Component {
                         <Card className="is-padding">
                             <Container fluid>
                                 <Field>
-                                    <label className="label">Identity</label>
+                                    <label className="label">Account</label>
                                     <div className="control">
-                                        <input className="input" value={this.state.identity} onChange={this.handleIdentity} type="text" placeholder="Admin ID e.g.582115015"></input>
+                                        <input className="input" value={this.state.identity} onChange={this.handleIdentity} type="text" placeholder="Admin account e.g.admin"></input>
                                     </div>
                                 </Field>
                                 <Field>

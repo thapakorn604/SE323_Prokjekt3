@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 import Login from '../Views/Login'
 
-describe('Test login', () => {
+describe('Test Users login', () => {
     const stubs = [
         {account : 'student',password :'student',type : 'Student'},
         {account : 'lecturer',password :'lecturer',type : 'Lecturer'},
@@ -15,6 +15,7 @@ describe('Test login', () => {
         {account : 'lecturer',password :'student',type : 'Lecturer'},
         {account : 'lecturer',password :'lecturer',type : 'Student'}
     ]
+
   it('should renders correctly', () => {
     const wrapper = shallow(<Login />)
     expect(wrapper.state('type')).toBe('Student')
@@ -73,6 +74,3 @@ describe('Test login', () => {
  })
     
 })
-
-
-
