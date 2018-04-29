@@ -3,6 +3,10 @@ import { shallow } from 'enzyme'
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
 
+import AdminNav from '../Views/AdminNav'
+import { Button, Box } from 'reactbulma'
+import Style from '../Views/style.css'
+
 Enzyme.configure({ adapter: new Adapter() })
 
 import AdminAddCourse from '../Views/AdminAddCourse'
@@ -12,8 +16,13 @@ describe('Test Add Course',()=>{
     credits : '3', days : 'Monday', timefrom : '9:30', timeto : '10:00', semester : '1/2560'},
     {id : '', name : 'Computer Programming', lecturers : 'Dr.Prompong Sugunasil', seats : '30',
     credits : '3', days : 'Monday', timefrom : '9:30', timeto : '10:00', semester : '1/2560'},
-    
+
   ]
+  it('Add Grade render correctly',()=>{
+    const wrapper = shallow(<AdminAddCourse/>)
+    expect(wrapper.find(AdminNav)).toHaveLength(1)
+  })
+
   it('Add Course renders correctly',()=>{
     const wrapper = shallow(<AdminAddCourse/>)
     expect(wrapper.state('id')).toBe('')
