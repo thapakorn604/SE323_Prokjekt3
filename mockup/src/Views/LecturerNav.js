@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Router, NavLink } from 'react-router-dom'
 import { Button } from 'reactbulma'
 
 class LecturerNav extends Component {
@@ -17,7 +17,6 @@ class LecturerNav extends Component {
 
     render() {
         return (
-            <div>
                 <nav className="navbar is-success" role="navigation">
                     <div className="container">
                         <div className="navbar-brand">
@@ -43,7 +42,7 @@ class LecturerNav extends Component {
                         </div>
                     </div>
                 </nav>
-            </div>
+            
         )
     }
 }
