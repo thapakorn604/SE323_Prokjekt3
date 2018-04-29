@@ -31,6 +31,11 @@ describe('Test Users login', () => {
     expect(wrapper.state('password')).toBe('student')
     expect(wrapper.state('type')).toBe('Student')
     expect(wrapper.instance().handleSignIn()).toBeCalled
+    const newUrl='student/index'
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
  })
 
  it('should login correctly by Lecturer', () => {
@@ -41,6 +46,11 @@ describe('Test Users login', () => {
     expect(wrapper.state('password')).toBe('lecturer')
     expect(wrapper.state('type')).toBe('Lecturer')
     expect(wrapper.instance().handleSignIn()).toBeCalled
+    const newUrl='lecturer/index'
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
  })
 
  it('should not login by wrong account', () => {
@@ -51,6 +61,11 @@ describe('Test Users login', () => {
     expect(wrapper.state('password')).toBe('student')
     expect(wrapper.state('type')).toBe('Student')
     expect(wrapper.instance().handleSignIn()).toBeCalled
+    const newUrl=''
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
  })
 
  it('should not login by wrong password', () => {
@@ -61,6 +76,11 @@ describe('Test Users login', () => {
     expect(wrapper.state('password')).toBe('student')
     expect(wrapper.state('type')).toBe('Lecturer')
     expect(wrapper.instance().handleSignIn()).toBeCalled
+    const newUrl=''
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
  })
 
  it('should not login by wrong type', () => {
@@ -71,6 +91,11 @@ describe('Test Users login', () => {
     expect(wrapper.state('password')).toBe('lecturer')
     expect(wrapper.state('type')).toBe('Student')
     expect(wrapper.instance().handleSignIn()).toBeCalled
+    const newUrl=''
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
  })
     
 })
