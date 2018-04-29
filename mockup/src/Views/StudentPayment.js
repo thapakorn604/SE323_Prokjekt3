@@ -10,8 +10,8 @@ class StudentPayment extends Component {
         super(props);
         this.state = {  }
     }
-    render() { 
-        return (  
+    render() {
+        return (
             <div>
                 <StudentNav />
             <section className="section">
@@ -19,16 +19,16 @@ class StudentPayment extends Component {
             <h1 className="has-text-centered is-size-4 has-text-weight-bold">Tuition fee Summary</h1>
                 <hr/>
                 <div className="content has-text-centered">
-                <p className="is-inline has-text-weight-bold is-size-5">Name: </p> 
-                <p className="is-inline is-size-6"> Thapakorn Tuwaemuesa</p> 
+                <p className="is-inline has-text-weight-bold is-size-5">Name: </p>
+                <p className="is-inline is-size-6"> Thapakorn Tuwaemuesa</p>
                 <span>&nbsp;&nbsp;&nbsp;</span>
-                <p className="is-inline has-text-weight-bold is-size-5">Student ID: </p> 
+                <p className="is-inline has-text-weight-bold is-size-5">Student ID: </p>
                 <p className="is-inline is-size-6"> 582115015</p>
                 <br />
-                <p className="is-inline has-text-weight-bold is-size-5">Faculty: </p> 
-                <p className="is-inline is-size-6"> Colleage of Art, Media and Technology</p> 
+                <p className="is-inline has-text-weight-bold is-size-5">Faculty: </p>
+                <p className="is-inline is-size-6"> Colleage of Art, Media and Technology</p>
                 <span>&nbsp;&nbsp;&nbsp;</span>
-                <p className="is-inline has-text-weight-bold is-size-5">Major: </p> 
+                <p className="is-inline has-text-weight-bold is-size-5">Major: </p>
                 <p className="is-inline is-size-6"> Software Engineering</p>
                 </div>
                 <hr />
@@ -43,10 +43,10 @@ class StudentPayment extends Component {
                                     <button class="button">Pay with Credit/Debit card</button>
                                 </div>
                             </Field>
-            </section>         
-            </div>    
+            </section>
+            </div>
            )
     }
 }
- 
+
 export default StudentPayment ;
