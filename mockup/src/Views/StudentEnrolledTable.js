@@ -18,7 +18,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw1(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
     {
-            document.getElementById("c1").hidden="true"
+            //document.getElementById("c1").hidden="true"
             this.setState ({
                 allcredit :this.state.allcredit-3
             })
@@ -27,7 +27,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw2(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
     {
-            document.getElementById("c2").hidden="true"
+            //document.getElementById("c2").hidden="true"
             this.setState ({
                 allcredit :this.state.allcredit-3
             })
@@ -36,7 +36,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw3(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
     {
-            document.getElementById("c3").hidden="true"
+            //document.getElementById("c3").hidden="true"
             this.setState ({
                 allcredit :this.state.allcredit-3
             })
@@ -45,7 +45,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw4(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
     {
-            document.getElementById("c4").hidden="true"
+            //document.getElementById("c4").hidden="true"
             this.setState ({
                 allcredit :this.state.allcredit-3
             })
@@ -55,7 +55,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw5(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
     {
-            document.getElementById("c5").hidden="true"
+            //document.getElementById("c5").hidden="true"
             this.setState ({
                 allcredit :this.state.allcredit-3
             })
@@ -64,7 +64,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw7(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
 		{
-            document.getElementById("c7").hidden="true"
+            //document.getElementById("c7").hidden="true"
             this.setState ({
                 allcredit : this.state.allcredit-1
             })
@@ -74,7 +74,7 @@ class StudentEnrolledTable extends Component {
     handleWithdraw6(){
         if(window.confirm('Are you sure to withdraw this course ?')==true)
 		{
-            document.getElementById("c6").hidden="true"
+            //document.getElementById("c6").hidden="true"
             this.setState ({
                 allcredit :this.state.allcredit-3
             })
