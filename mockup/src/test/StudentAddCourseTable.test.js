@@ -16,7 +16,7 @@ describe('Test enroll course', () => {
   //   })
   it('credits decrease', () => {
     const wrapper = shallow(<StudentAddCourseTable />)
-    wrapper.setState({allcredit:19}）
+    wrapper.setState({allcredit:19})
     wrapper.instance().handleAdd()
     expect(wrapper.state('allcredit')).toBe(22)
     wrapper.instance().handleAdd()
