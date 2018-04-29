@@ -35,7 +35,7 @@ class StudentIndex extends Component {
                             </div>
                             <div class="tile is-parent">
                                 <div class="tile is-child box">
-                                    <h1 className="is-size-4 has-text-weight-bold">What's new ?</h1>
+                                    <h1 className="is-size-4 has-text-weight-bold">What is comming up? </h1>
                                     <div className="content">
                                         <ul>
                                             <li><a>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
