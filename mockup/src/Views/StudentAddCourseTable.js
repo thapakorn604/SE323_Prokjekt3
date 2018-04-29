@@ -4,21 +4,25 @@ import { Button } from 'reactbulma'
 class StudentAddCourseTable extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {allcredit:0}
 
         this.handleAdd = this.handleAdd.bind(this)
-        this.handleExtraCredit = this.handleExtraCredit.bind(this)
+        //this.handleExtraCredit = this.handleExtraCredit.bind(this)
     }
     handleAdd() {
-        if (window.confirm('Are you sure to add this course ?') == true) {
-            window.alert("Successfully enrolled!")
-            window.location.replace('/student/index')
-        }
-    }
-    handleExtraCredit(){
+      if (this.state.allcredit>=24) {
         if (window.confirm('Are you sure to add this course ?') == true) {
             window.alert("Sorry, Your remaining credit is not enough to enroll.")
         }
+      }
+        else {if  (window.confirm('Are you sure to add this course ?') == true) {
+            window.alert("Successfully enrolled!")
+            this.setState ({
+                allcredit :this.state.allcredit+3
+            })
+            //window.location.replace('/student/index')
+        }
+      }
     }
     render() {
         return (

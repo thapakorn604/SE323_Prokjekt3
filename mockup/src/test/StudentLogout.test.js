@@ -14,6 +14,11 @@ describe('Test Student Logout',() => {
     wrapper.instance().handleLogout()
     expect(wrapper.instance().handleLogout()).toBeCalled
     window.confirm = jest.fn(() => true)
+    const newUrl=''
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
   })
 
   it('Logout not Successfully',() => {
@@ -21,6 +26,11 @@ describe('Test Student Logout',() => {
     wrapper.instance().handleLogout()
     expect(wrapper.instance().handleLogout()).toBeCalled
     window.cancel = jest.fn(() => false)
+    const newUrl='student/index'
+    Object.defineProperty(window.location,'herf',{
+      writable:true,
+      value:newUrl
+    });
 
   })
 })
