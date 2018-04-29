@@ -12,8 +12,7 @@ describe('Test Add Course',()=>{
     credits : '3', days : 'Monday', timefrom : '9:30', timeto : '10:00', semester : '1/2560'},
     {id : '', name : 'Computer Programming', lecturers : 'Dr.Prompong Sugunasil', seats : '30',
     credits : '3', days : 'Monday', timefrom : '9:30', timeto : '10:00', semester : '1/2560'},
-    {id : '953321', name : 'Software Construct Testing and Maintenance', lecturers : '', seats : '30',
-    credits : '3', days : 'Monday', timefrom : '9:30', timeto : '10:00', semester : '1/2560'}
+    
   ]
   it('Add Course renders correctly',()=>{
     const wrapper = shallow(<AdminAddCourse/>)
@@ -57,19 +56,5 @@ describe('Test Add Course',()=>{
     expect(wrapper.state('semester')).toBe('1/2560')
     expect(wrapper.instance().handleSubmit()).toBeCalled
   })
-  it('Add Course not Successfully',()=>{
-    const wrapper = shallow(<AdminAddCourse/>)
-    wrapper.setState(stubs[2])
-    wrapper.instance().handleSubmit()
-    expect(wrapper.state('id')).toBe('953321')
-    expect(wrapper.state('name')).toBe('Software Construct Testing and Maintenance')
-    expect(wrapper.state('lecturers')).toBe('')
-    expect(wrapper.state('seats')).toBe('30')
-    expect(wrapper.state('credits')).toBe('3')
-    expect(wrapper.state('days')).toBe('Monday')
-    expect(wrapper.state('timefrom')).toBe('9:30')
-    expect(wrapper.state('timeto')).toBe('10:00')
-    expect(wrapper.state('semester')).toBe('1/2560')
-    expect(wrapper.instance().handleSubmit()).toBeCalled
-  })
+
 })
